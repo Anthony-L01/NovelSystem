@@ -7,14 +7,14 @@ spring:
 # 数据库连接地址
     url: jdbc:mysql://localhost:3306/west2?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false
 # 数据库用户名&密码：
-    username: root
-    password: 123456
+    username:
+    password:
 # reid配置
   redis:
-    host: 101.132.45.41
+    host:
     port: 6380
     database: 0
-    password: lxc20010716
+    password:
     timeout: 50000
 #下面这些内容是为了让MyBatis映射
 #指定Mybatis的Mapper文件

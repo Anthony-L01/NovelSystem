@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    # 数据库驱动：
+    driver-class-name: com.mysql.cj.jdbc.Driver
+# 数据源名称
+    name: defaultDataSource
+# 数据库连接地址
+    url: jdbc:mysql://localhost:3306/west2?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false
+# 数据库用户名&密码：
+    username: root
+    password: 123456
+# reid配置
+  redis:
+    host: 101.132.45.41
+    port: 6380
+    database: 0
+    password: lxc20010716
+    timeout: 50000
+#下面这些内容是为了让MyBatis映射
+#指定Mybatis的Mapper文件
+mybatis:
+    mapper-locations: classpath:mappers/*xml
+#指定Mybatis的实体目录
+    type-aliases-package: com.lxc.novelsystem.entity
+    configuration:
+     map-underscore-to-camel-case: true
+# 应用服务 WEB 访问端口
+server:
+  port: 8087
+
+  #分页插件配置
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: cout=countSql
+
+
+
